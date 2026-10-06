@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mev Consultoria Digital</title>
+
+    <meta name="description"
+        content="Licenciamento, Transferência, Multas, CNH e MEI. Diagnóstico gratuito e atendimento 100% digital no WhatsApp.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mevconsultoria.com.br/">
+    <meta property="og:title" content="Mev Consultoria | Burocracia Resolvida">
+    <meta property="og:description" content="Escaneamos. Explicamos. Resolvemos. Regularize seu veículo sem filas.">
+    <!-- <meta property="og:image" content="assets/img/capa-social.jpg"> -->
+    <meta name="theme-color" content="#0D0320">
+
+    <link rel="icon" type="image/png" href="assets/img/LogoMev01.jpg">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-brand-dark text-white antialiased selection:bg-brand-purple selection:text-white overflow-x-hidden font-sans">
+
+    <!-- Header fixo -->
+    <header id="header"
+        class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between max-w-7xl">
+            <!-- Logo Slide 1 (Destaque ou Canto) -->
+            <!-- Logo Slide 1 (Destaque ou Canto) -->
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/img/LogoMev01.jpg" alt="Mev Consultoria" class="h-12 w-auto object-contain rounded-lg">
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-details font-medium text-gray-300">
+                <a href="#manifesto" class="hover:text-brand-purple transition">Quem Somos</a>
+                <a href="#metodologia" class="hover:text-brand-purple transition">Como Funciona</a>
+                <a href="#servicos" class="hover:text-brand-purple transition">Serviços</a>
+                <a href="blog.html" class="hover:text-brand-purple transition">Blog</a>
+                <a href="https://wa.me/message/ESJRV63FECTAD1" target="_blank"
+                    class="bg-brand-blue text-white px-5 py-2.5 rounded-full font-details font-bold hover:bg-brand-blueHover transition shadow-lg flex items-center gap-2">
+                    <i class="ph-fill ph-whatsapp-logo text-lg"></i> Falar Agora
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-brand-lightBlue">
+                <span class="iconify" data-icon="heroicons:bars-3-bottom-right-20-solid"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-x-0 top-20 bg-brand-card border-b border-white/10 p-6 transform -translate-y-full transition-transform duration-300 md:hidden z-40">
+        <nav class="flex flex-col gap-4 text-center">
+            <a href="#manifesto" class="text-gray-300 py-2 font-details">Quem Somos</a>
+            <a href="#metodologia" class="text-gray-300 py-2 font-details">Como Funciona</a>
+            <a href="#servicos" class="text-gray-300 py-2 font-details">Serviços</a>
+            <a href="blog.html" class="text-gray-300 py-2 font-details">Blog</a>
+            <a href="https://wa.me/message/ESJRV63FECTAD1"
+                class="text-brand-green font-bold py-2 border border-brand-green/30 rounded-lg font-details">Falar no
+                WhatsApp</a>
+        </nav>
+    </div>
+
+    <!-- Slide 1: Capa (Impacto) -->
+    <section id="hero"
+        class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+        <!-- Glow Roxo -->
+        <div class="purple-glow"></div>
+
+        <div class="z-10 text-center max-w-4xl mx-auto" data-aos="fade-up">
+            <!-- Logo Grande -->
+            <div class="mb-8 flex justify-center">
+                <img src="assets/img/LogoMev01.jpg" alt="Mev Consultoria"
+                    class="h-32 w-auto object-contain rounded-2xl shadow-[0_0_40px_rgba(128,90,213,0.3)]">
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-4 tracking-tight">
+                Sua vida em ordem. <br>
+                Do veículo ao seu negócio.
+            </h1>
+
+            <h2 class="text-xl md:text-2xl font-sans font-light text-gray-300 mb-8 tracking-wide max-w-2xl mx-auto">
+                Regularize documentos, entenda seus débitos e resolva a burocracia sem filas, sem sustos e sem linguagem
+                complicada.
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
+                <a href="https://wa.me/message/ESJRV63FECTAD1"
+                    class="bg-brand-blue hover:bg-brand-blueHover text-white px-8 py-4 rounded-full text-lg font-details font-bold transition duration-300 shadow-[0_0_20px_rgba(0,84,163,0.4)] hover:shadow-[0_0_30px_rgba(0,84,163,0.6)] animate-pulse">
+                    Resolver agora pelo WhatsApp
+                </a>
+                <a href="#metodologia"
+                    class="border border-white/20 hover:bg-white/10 text-white px-8 py-4 rounded-full text-lg font-details font-bold transition duration-300">
+                    Entender antes de pagar
+                </a>
+            </div>
+
+            <div
+                class="flex flex-col md:flex-row items-center justify-center gap-4 text-brand-gray text-sm font-medium">
+                <span class="flex items-center gap-2"><i class="ph-fill ph-check text-brand-purple"></i> Sem fila</span>
+                <span class="hidden md:inline">•</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-check text-brand-purple"></i> Sem
+                    confusão</span>
+                <span class="hidden md:inline">•</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-check text-brand-purple"></i> Sem promessa
+                    vazia</span>
+            </div>
+        </div>
+
+        <!-- Rodapé Slide 1 -->
+        <div class="absolute bottom-0 w-full bg-brand-abyss py-6 border-t border-white/5">
+            <div class="container mx-auto flex justify-center gap-12 md:gap-24 text-brand-lightBlue opacity-60">
+                <i class="ph-fill ph-car text-4xl" title="Carro"></i>
+                <i class="ph-fill ph-identification-card text-4xl" title="CNH"></i>
+                <i class="ph-fill ph-chart-line-up text-4xl" title="Empresa"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Dor -->
+    <section id="problema" class="py-24 px-6 bg-brand-dark relative z-10 border-b border-white/5">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-5xl font-heading font-bold mb-8">
+                Se você sente que:
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
+                <div class="mev-card p-6">
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-warning-circle text-red-400 text-xl mt-0.5"></i>
+                            <span>Paga multa sem saber o porquê.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-warning-circle text-red-400 text-xl mt-0.5"></i>
+                            <span>Tem medo de blitz ou bloqueio do veículo.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mev-card p-6">
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-warning-circle text-red-400 text-xl mt-0.5"></i>
+                            <span>Tentou resolver online e se perdeu em siglas e portais.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-warning-circle text-red-400 text-xl mt-0.5"></i>
+                            <span>Tem MEI/CNPJ e não sabe se está tudo certo.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-xl md:text-2xl text-white font-medium mb-2">Você não está sozinho.</p>
+            <p class="text-brand-gray text-lg mb-8">O problema não é você. O problema é a burocracia que ninguém
+                explica.</p>
+        </div>
+    </section>
+
+    <!-- Quem Somos (Antigo Manifesto) -->
+    <section id="manifesto" class="py-24 px-6 bg-brand-abyss relative z-10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+                    A burocracia ficou digital. <br>
+                    <span class="text-brand-purple">Mas não ficou simples.</span>
+                </h2>
+                <div class="space-y-6 text-lg text-gray-300 font-sans font-light leading-relaxed">
+                    <p>
+                        A <strong>MEV Consultoria</strong> existe para traduzir o idioma do governo e transformar
+                        confusão em solução prática.
+                    </p>
+                    <p>
+                        Não somos despachante tradicional. <br>
+                        Somos <strong>consultoria de gestão burocrática</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="bg-brand-card p-10 rounded-2xl border border-white/5 shadow-2xl relative">
+                    <div
+                        class="absolute -top-4 -right-4 w-12 h-12 bg-brand-purple rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                        <i class="ph-bold ph-lightbulb"></i>
+                    </div>
+                    <p class="text-2xl font-heading font-medium text-white leading-normal">
+                        "Traduzimos o idioma do governo."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: A Metodologia -->
+    <section id="metodologia" class="py-24 px-6 bg-brand-dark/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Como Funciona (Simples de Verdade)</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center mb-12">
+                <!-- Pilar 1 -->
+                <div class="group p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-highlight rounded-full flex items-center justify-center text-brand-lightBlue text-3xl mb-6 group-hover:scale-110 transition">
+                        <i class="ph-fill ph-magnifying-glass"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-white">1️⃣ Escanear — Diagnóstico</h3>
+                    <p class="text-gray-400 font-sans text-sm leading-relaxed">
+                        Consultamos sistemas oficiais para identificar débitos, bloqueios, restrições e riscos ocultos.
+                        Nada no escuro.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="group p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-highlight rounded-full flex items-center justify-center text-brand-lightBlue text-3xl mb-6 group-hover:scale-110 transition">
+                        <i class="ph-fill ph-chat-circle-text"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-white">2️⃣ Explicar — Estratégia</h3>
+                    <p class="text-gray-400 font-sans text-sm leading-relaxed">
+                        Explicamos o que está acontecendo, o que é obrigatório e o que pode esperar. Você entende antes
+                        de decidir.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="group p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-highlight rounded-full flex items-center justify-center text-brand-lightBlue text-3xl mb-6 group-hover:scale-110 transition">
+                        <i class="ph-fill ph-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3 text-white">3️⃣ Resolver — Execução</h3>
+                    <p class="text-gray-400 font-sans text-sm leading-relaxed">
+                        Cuidamos da burocracia, emissão de guias e acompanhamento. Você recebe tudo pronto, de forma
+                        digital.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <a href="https://wa.me/message/ESJRV63FECTAD1"
+                    class="bg-brand-blue hover:bg-brand-blueHover text-white px-8 py-4 rounded-full text-lg font-details font-bold transition duration-300 shadow-lg hover:shadow-xl">
+                    Começar agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Que Resolvemos -->
+    <section id="servicos" class="py-24 px-6 bg-brand-dark relative z-10 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">O Que Resolvemos</h2>
+                <p class="text-lg text-gray-300">Soluções diretas para problemas reais.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card Veículo -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-brand-purple/20 p-3 rounded-xl text-brand-purple">
+                            <i class="ph-fill ph-car text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Para seu Veículo</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Licenciamento anual (CRLV-e)</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Multas, IPVA e taxas em atraso</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i> Raio-X
+                            veicular (bloqueios, leilão, restrições)</li>
+                    </ul>
+                    <a href="https://wa.me/message/ESJRV63FECTAD1"
+                        class="block text-center w-full border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white font-bold py-3 rounded-lg transition">
+                        Quero regularizar meu veículo
+                    </a>
+                </div>
+
+                <!-- Card Compra & Venda -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-brand-purple/20 p-3 rounded-xl text-brand-purple">
+                            <i class="ph-fill ph-handshake text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Compra & Venda Segura</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Transferência digital (ATPV-e)</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Comunicado de venda</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i> Baixa
+                            de gravame</li>
+                    </ul>
+                    <a href="https://wa.me/message/ESJRV63FECTAD1"
+                        class="block text-center w-full border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white font-bold py-3 rounded-lg transition">
+                        Quero vender ou comprar com segurança
+                    </a>
+                </div>
+
+                <!-- Card CNH -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-brand-purple/20 p-3 rounded-xl text-brand-purple">
+                            <i class="ph-fill ph-identification-card text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">CNH & Condutor</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Renovação e CNH definitiva</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i> Gestão
+                            de pontos e infrações</li>
+                    </ul>
+                    <a href="https://wa.me/message/ESJRV63FECTAD1"
+                        class="block text-center w-full border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white font-bold py-3 rounded-lg transition">
+                        Resolver minha CNH
+                    </a>
+                </div>
+
+                <!-- Card Negócio -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 hover:border-brand-purple/50 transition duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-brand-purple/20 p-3 rounded-xl text-brand-purple">
+                            <i class="ph-fill ph-buildings text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Para seu Negócio</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Regularização MEI e DAS atrasado</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Certidões negativas e dívida ativa</li>
+                        <li class="flex items-start gap-2"><i class="ph-bold ph-check text-brand-green mt-1"></i>
+                            Organização para acesso a crédito</li>
+                    </ul>
+                    <a href="https://wa.me/message/ESJRV63FECTAD1"
+                        class="block text-center w-full border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white font-bold py-3 rounded-lg transition">
+                        Organizar meu CNPJ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educação Faz Parte da Solução -->
+    <section class="py-24 px-6 bg-brand-abyss relative border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">Educação Faz Parte da Solução</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Aqui você não paga sem entender. Criamos conteúdos simples para explicar por que a multa existe, para
+                onde vai o pagamento e como evitar novos problemas.
+            </p>
+            <p class="text-white font-bold text-xl mb-8">Você resolve hoje e aprende para não errar amanhã.</p>
+
+            <a href="blog.html"
+                class="inline-flex items-center gap-2 text-brand-purple hover:text-white transition font-bold font-details">
+                Aprender sobre meus documentos <i class="ph-bold ph-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Prova de Confiança -->
+    <section class="py-16 px-6 bg-brand-dark text-center border-t border-white/5">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <i class="ph-duotone ph-shield-check text-6xl text-brand-green mb-6"></i>
+            <h2 class="text-2xl md:text-3xl font-heading font-bold mb-4">Prova de Confiança</h2>
+            <p class="text-gray-300 text-lg leading-relaxed">
+                Trabalhamos com sistemas oficiais e processos reais. <br>
+                Sem promessa impossível. Sem atalhos ilegais. <br>
+                <span class="text-white font-bold">Só clareza, método e solução.</span>
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- Chamada Final -->
+    <section class="py-24 px-6 bg-brand-dark text-center relative overflow-hidden">
+        <!-- Glow Final -->
+        <div class="purple-glow opacity-50 scale-150"></div>
+
+        <div class="max-w-3xl mx-auto relative z-10" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-6xl font-heading font-bold mb-6">Chega de perder tempo tentando decifrar sigla.
+            </h2>
+            <p class="text-xl text-gray-300 mb-10">Fale com a MEV e organize sua vida — do veículo ao negócio.</p>
+
+            <a href="https://wa.me/message/ESJRV63FECTAD1"
+                class="inline-block bg-brand-blue hover:bg-brand-blueHover text-white px-12 py-5 rounded-full text-lg font-details font-bold transition duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 mb-10">
+                Resolver agora pelo WhatsApp <i class="ph-bold ph-whatsapp-logo ml-2 align-middle"></i>
+            </a>
+
+            <div class="flex flex-col items-center gap-2">
+                <p class="text-2xl font-heading font-bold text-white">MEV Consultoria</p>
+                <p class="text-brand-purple text-lg font-medium tracking-wide">Clareza gera confiança. Confiança gera
+                    ação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-abyss pt-16 pb-8 px-6 border-t border-white/10 text-center md:text-left">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <img src="assets/img/LogoMev01.jpg" alt="Mev Consultoria" class="h-12 w-auto mb-6 rounded-lg">
+                <p class="text-brand-gray text-sm max-w-xs mx-auto md:mx-0 mb-6">
+                    Facilitando sua vida veicular e empresarial com tecnologia, diagnóstico e execução digital.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="https://www.instagram.com/mevconsultoriadigital/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition duration-300">
+                        <i class="ph-fill ph-instagram-logo text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mevconsultoriadigital/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition duration-300">
+                        <i class="ph-fill ph-facebook-logo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold mb-4 text-white">Navegação</h4>
+                <ul class="text-sm text-brand-gray font-details space-y-2">
+                    <li><a href="#manifesto" class="hover:text-brand-purple">Quem Somos</a></li>
+                    <li><a href="#metodologia" class="hover:text-brand-purple">Como Funciona</a></li>
+                    <li><a href="#servicos" class="hover:text-brand-purple">Serviços</a></li>
+                    <li><a href="blog.html" class="hover:text-brand-purple">Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold mb-4 text-white">Contato</h4>
+                <ul class="text-sm text-brand-gray font-details space-y-2">
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i
+                            class="ph-fill ph-whatsapp-logo"></i> (11) 99999-9999</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i
+                            class="ph-fill ph-envelope"></i> contato@mevconsultoria.com.br</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i class="ph-fill ph-clock"></i>
+                        Seg - Sex: 09h às 18h</li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-6xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-gray gap-4">
+            <p>© 2025 Mev Consultoria Digital. Todos os direitos reservados.</p>
+            <div class="flex gap-4">
+                <a href="termos.html" class="hover:text-white">Termos de Uso</a>
+                <a href="politica.html" class="hover:text-white">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante (Mantido) -->
+    <a href="https://wa.me/message/ESJRV63FECTAD1" target="_blank"
+        class="fixed bottom-6 right-6 bg-brand-green text-black w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-900/40 hover:scale-110 transition z-50 animate-bounce">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

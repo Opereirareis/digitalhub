@@ -1,0 +1,1 @@
+- [Fluxo de atendimento Mev](mev-intake-flow.md) — Priorizar triagem breve e envio confirmado pelo WhatsApp, sem formulário longo.

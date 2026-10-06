@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Mev Consultoria Digital"
+description = "A responsive institutional website for Mev Consultoria Digital, helping Brazilian drivers and small businesses resolve vehicle and documentation bureaucracy through clear guidance and WhatsApp support."
+version = "1.0.0"
+id = "artifacts/mev-consultoria"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21133
+
+[services.development]
+run = "pnpm --filter @workspace/mev-consultoria run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mev-consultoria", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mev-consultoria/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21133"
+BASE_PATH = "/"

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Mev Consultoria Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="tailwind.config.js"></script>
+</head>
+
+<body
+    class="bg-brand-dark text-brand-text antialiased selection:bg-brand-purple selection:text-white flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/img/LogoMev01.jpg" alt="Mev Consultoria" class="h-10 w-auto object-contain rounded-lg">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-details font-medium text-gray-300">
+                <a href="index.html#manifesto" class="hover:text-brand-purple transition">Quem Somos</a>
+                <a href="index.html#metodologia" class="hover:text-brand-purple transition">Como Funciona</a>
+                <a href="index.html#servicos" class="hover:text-brand-purple transition">Serviços</a>
+                <a href="blog.html" class="hover:text-brand-purple transition">Blog</a>
+            </div>
+
+            <a href="https://wa.me/message/ESJRV63FECTAD1" target="_blank"
+                class="hidden md:flex items-center gap-2 bg-brand-green text-black px-5 py-2.5 rounded-full font-details font-bold hover:brightness-110 transition shadow-[0_0_15px_rgba(37,211,102,0.3)]">
+                <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                Falar Agora
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-2xl">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-white/10 p-6 space-y-4">
+            <a href="#servicos" class="block text-gray-300">Serviços</a>
+            <a href="#como-funciona" class="block text-gray-300">Como Funciona</a>
+            <a href="#diferencial" class="block text-gray-300">Diferenciais</a>
+            <a href="https://wa.me/message/ESJRV63FECTAD1" class="block text-brand-green font-bold">Chamar no
+                WhatsApp</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20 px-6">
+        <section class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-heading font-extrabold mb-4">Fale Conosco</h1>
+            <p class="text-brand-gray text-lg mb-12">Sem formulários longos. Resposta rápida.</p>
+
+            <div class="gradient-border p-10 max-w-2xl mx-auto">
+                <h2 class="text-2xl font-heading font-bold mb-4">Canal Preferencial</h2>
+                <p class="text-brand-gray mb-8">Para orçamentos rápidos e dúvidas urgentes, use o WhatsApp.</p>
+
+                <a href="https://wa.me/message/ESJRV63FECTAD1"
+                    class="w-full bg-brand-green text-black text-lg px-8 py-4 rounded-full font-details font-bold hover:scale-105 transition duration-200 flex items-center justify-center gap-2 mb-8 shadow-lg shadow-green-900/40">
+                    <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+                    Resolver agora pelo WhatsApp
+                </a>
+
+                <div class="border-t border-white/10 pt-8 mt-4">
+                    <p class="flex items-center justify-center gap-2 text-brand-gray hover:text-white transition">
+                        <i class="ph-fill ph-envelope-simple text-brand-purple"></i>
+                        Email: contato@mevconsultoria.com.br
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-abyss pt-16 pb-8 px-6 border-t border-white/10 text-center md:text-left">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <img src="assets/img/LogoMev01.jpg" alt="Mev Consultoria" class="h-12 w-auto mb-6 rounded-lg">
+                <p class="text-brand-gray text-sm max-w-xs mx-auto md:mx-0 mb-6">
+                    Facilitando sua vida veicular e empresarial com tecnologia, diagnóstico e execução digital.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="https://www.instagram.com/mevconsultoriadigital/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition duration-300">
+                        <i class="ph-fill ph-instagram-logo text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mevconsultoriadigital/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition duration-300">
+                        <i class="ph-fill ph-facebook-logo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold mb-4 text-white">Navegação</h4>
+                <ul class="text-sm text-brand-gray font-details space-y-2">
+                    <li><a href="index.html#manifesto" class="hover:text-brand-purple">Quem Somos</a></li>
+                    <li><a href="index.html#metodologia" class="hover:text-brand-purple">Como Funciona</a></li>
+                    <li><a href="index.html#servicos" class="hover:text-brand-purple">Serviços</a></li>
+                    <li><a href="blog.html" class="hover:text-brand-purple">Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold mb-4 text-white">Contato</h4>
+                <ul class="text-sm text-brand-gray font-details space-y-2">
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i
+                            class="ph-fill ph-whatsapp-logo"></i> (11) 99999-9999</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i
+                            class="ph-fill ph-envelope"></i> contato@mevconsultoria.com.br</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i class="ph-fill ph-clock"></i>
+                        Seg - Sex: 09h às 18h</li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-6xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-gray gap-4">
+            <p>© 2025 Mev Consultoria Digital. Todos os direitos reservados.</p>
+            <div class="flex gap-4">
+                <a href="termos.html" class="hover:text-white">Termos de Uso</a>
+                <a href="politica.html" class="hover:text-white">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/message/ESJRV63FECTAD1" target="_blank"
+        class="fixed bottom-6 right-6 bg-brand-green text-black w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-900/40 hover:scale-110 transition z-50">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <script>
+        // Menu Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

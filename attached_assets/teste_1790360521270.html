@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Central de Guias | MEV Consultoria</title>
+    <meta name="description" content="Dicas práticas, guias passo a passo e alertas sobre licenciamento, multas e regularização veicular sem burocracia.">
+    
+    <link rel="icon" type="image/png" href="LogoMev01.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+
+    <!-- Fontes Oficiais -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones Phosphor e AOS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .blog-card-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+        }
+        .blog-card-content.expanded {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-purple selection:text-white flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- HEADER PADRONIZADO -->
+    <header id="header" class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between max-w-7xl">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="LogoMev01.jpg" alt="Mev Consultoria" class="h-12 w-auto object-contain rounded-lg">
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-details font-medium text-gray-300">
+                <a href="index.html" class="hover:text-brand-purple transition">Início</a>
+                <a href="servicos.html" class="hover:text-brand-purple transition">Serviços</a>
+                <a href="sobre.html" class="hover:text-brand-purple transition">Sobre Nós</a>
+                <a href="https://wa.me/5511965391331?text=Olá!%20Vim+pelo+blog+e+preciso+de+ajuda+com+meu+veículo." target="_blank"
+                   class="bg-brand-blue text-white px-5 py-2.5 rounded-full font-details font-bold hover:bg-brand-blueHover transition shadow-lg flex items-center gap-2">
+                    <i class="ph-fill ph-whatsapp-logo text-lg"></i> Falar Agora
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-brand-lightBlue" aria-label="Abrir menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="fixed inset-x-0 top-20 bg-brand-card border-b border-white/10 p-6 transform -translate-y-full transition-transform duration-300 md:hidden z-40">
+        <nav class="flex flex-col gap-4 text-center">
+            <a href="index.html" class="text-gray-300 py-2 font-details">Início</a>
+            <a href="servicos.html" class="text-gray-300 py-2 font-details">Serviços</a>
+            <a href="sobre.html" class="text-gray-300 py-2 font-details">Sobre Nós</a>
+            <a href="https://wa.me/5511965391331?text=Olá!%20Vim+pelo+blog+e+preciso+de+ajuda+com+meu+veículo." 
+               class="text-[#25D366] font-bold py-2 border border-[#25D366]/30 rounded-lg font-details">
+               Chamar no WhatsApp
+            </a>
+        </nav>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="flex-grow pt-32 pb-24 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <!-- Cabeçalho do Blog -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-purple font-details">Educação e Autonomia</span>
+                <h1 class="text-3xl md:text-5xl font-heading font-extrabold mt-3 mb-4 leading-tight text-white">
+                    Central de Dicas e Guias <span class="text-brand-purple">MEV</span>
+                </h1>
+                <p class="text-brand-gray text-base md:text-lg max-w-2xl mx-auto">
+                    Entenda antes de pagar. Explicamos o que está travando o seu documento sem juridiquês e com transparência total.
+                </p>
+            </div>
+
+            <!-- Lista de Cards Interativos -->
+            <div class="space-y-6">
+
+                <!-- CARD 1: Licenciamento Travado -->
+                <article class="gradient-border overflow-hidden p-6 md:p-8" data-aos="fade-up">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-purple/10 flex items-center justify-center text-brand-purple text-2xl flex-shrink-0">
+                            <i class="ph-fill ph-file-text"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-xl md:text-2xl font-heading font-bold text-white mb-2">
+                                Licenciamento Pago e Documento Não Atualizado: O que Houve?
+                            </h2>
+                            <p class="text-sm md:text-base text-brand-gray mb-4">
+                                Pagou a taxa de R$ 174,08 no banco e o CRLV-e não liberou? O Detran não aceita licenciamento parcial.
+                            </p>
+                            <button onclick="toggleCard('licenciamento')" class="inline-flex items-center gap-2 bg-brand-card hover:bg-white/10 text-brand-lightBlue px-5 py-2 rounded-full text-xs font-bold font-details transition border border-white/10">
+                                <span>Ver explicação</span>
+                                <i id="icon-licenciamento" class="ph-bold ph-caret-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="content-licenciamento" class="blog-card-content mt-4 pt-4 border-t border-white/5 text-gray-300 text-sm space-y-3">
+                        <p>Para emitir o documento novo, o sistema do Senatran exige a quitação completa de qualquer débito atrelado ao Renavam. Se houver parcelas de IPVA pendentes, multas municipais, multas de rodovias ou débitos inscritos em Dívida Ativa, o CRLV-e fica retido.</p>
+                        <p class="text-white font-semibold">Solução MEV: Rodamos o Raio-X Veicular para achar o débito exato e liberamos seu documento 100% online.</p>
+                    </div>
+                </article>
+
+                <!-- CARD 2: Multas RENAINF vs. Multas Comuns -->
+                <article class="gradient-border overflow-hidden p-6 md:p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-500 text-2xl flex-shrink-0">
+                            <i class="ph-fill ph-warning-octagon"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-xl md:text-2xl font-heading font-bold text-white mb-2">
+                                Recall Pendente e Multa RENAINF: O Perigo Oculto
+                            </h2>
+                            <p class="text-sm md:text-base text-brand-gray mb-4">
+                                Multas de outros estados e convocações de fábrica travam a emissão do documento mesmo sem constar na consulta rápida do banco.
+                            </p>
+                            <button onclick="toggleCard('multas')" class="inline-flex items-center gap-2 bg-brand-card hover:bg-white/10 text-brand-lightBlue px-5 py-2 rounded-full text-xs font-bold font-details transition border border-white/10">
+                                <span>Ver detalhes</span>
+                                <i id="icon-multas" class="ph-bold ph-caret-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="content-multas" class="blog-card-content mt-4 pt-4 border-t border-white/5 text-gray-300 text-sm space-y-3">
+                        <ul class="list-disc list-inside space-y-1">
+                            <li><strong class="text-white">Multa RENAINF:</strong> Infração cometida em rodovias federais (PRF) ou fora do seu estado de registro.</li>
+                            <li><strong class="text-white">Recall Pendente:</strong> Se a montadora convocou o conserto há mais de 1 ano e não foi feito, a lei bloqueia o licenciamento.</li>
+                        </ul>
+                        <p>Fazemos a triagem e o agendamento correto para desbloquear o sistema.</p>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Transferência e ATPV-e -->
+                <article class="gradient-border overflow-hidden p-6 md:p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] text-2xl flex-shrink-0">
+                            <i class="ph-fill ph-handshake"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-xl md:text-2xl font-heading font-bold text-white mb-2">
+                                Compra e Venda Segura: O que é o ATPV-e?
+                            </h2>
+                            <p class="text-sm md:text-base text-brand-gray mb-4">
+                                O antigo DUT em papel verde não é mais emitido. A intenção de venda agora é 100% eletrônica.
+                            </p>
+                            <button onclick="toggleCard('atpve')" class="inline-flex items-center gap-2 bg-brand-card hover:bg-white/10 text-brand-lightBlue px-5 py-2 rounded-full text-xs font-bold font-details transition border border-white/10">
+                                <span>Ver como funciona</span>
+                                <i id="icon-atpve" class="ph-bold ph-caret-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="content-atpve" class="blog-card-content mt-4 pt-4 border-t border-white/5 text-gray-300 text-sm space-y-3">
+                        <p>O ATPV-e (Autorização para Transferência de Propriedade do Veículo) vincula comprador e vendedor nos sistemas do governo. Emitimos o comunicado de venda para blindar o seu CPF contra multas e pontos após a entrega do veículo.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- CTA Direto -->
+            <div class="mt-16 text-center bg-brand-card border border-white/5 p-8 rounded-2xl" data-aos="zoom-in">
+                <h3 class="text-2xl font-heading font-bold text-white mb-3">Prefere que a gente resolva para você?</h3>
+                <p class="text-brand-gray text-sm mb-6 max-w-xl mx-auto">
+                    Evite filas, juros e dor de cabeça. Enviamos seu orçamento sem compromisso e sem taxas escondidas.
+                </p>
+                <a href="https://wa.me/5511965391331?text=Olá!%20Quero%20fazer%20um%20Raio-X%20Veicular%20no%20meu%20carro." target="_blank"
+                   class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-green-600 text-white font-bold font-details py-3 px-8 rounded-full shadow-lg transition">
+                    <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+                    <span>Falar com Consultor Agora</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER PADRONIZADO -->
+    <footer class="bg-brand-abyss pt-16 pb-8 px-6 border-t border-white/10 text-center md:text-left">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <img src="LogoMev01.jpg" alt="Mev Consultoria" class="h-12 w-auto mb-6 rounded-lg">
+                <p class="text-brand-gray text-sm max-w-xs mx-auto md:mx-0 mb-6">
+                    Facilitando sua vida veicular com tecnologia, diagnóstico preciso e execução digital rápida.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="https://www.instagram.com/mevconsultoriadigital/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition">
+                        <i class="ph-fill ph-instagram-logo text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mevconsultoriadigital/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-purple hover:bg-brand-purple hover:text-white transition">
+                        <i class="ph-fill ph-facebook-logo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold mb-4 text-white">Navegação</h4>
+                <ul class="text-sm text-brand-gray font-details space-y-2">
+                    <li><a href="index.html" class="hover:text-brand-purple transition">Início</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-purple transition">Nossos Serviços</a></li>
+                    <li><a href="sobre.html" class="hover:text-brand-purple transition">Quem Somos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold mb-4 text-white">Contato</h4>
+                <ul class="text-sm text-brand-gray font-details space-y-2">
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i class="ph-fill ph-whatsapp-logo"></i> (11) 965391331</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i class="ph-fill ph-envelope"></i> contato@mevconsultoria.com.br</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i class="ph-fill ph-clock"></i> Seg - Sex: 09h às 18h</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-gray gap-4">
+            <p>&copy; 2026 Mev Consultoria Digital. Todos os direitos reservados.</p>
+            <div class="flex gap-4">
+                <a href="termos.html" class="hover:text-white">Termos de Uso</a>
+                <a href="politica.html" class="hover:text-white">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5511965391331?text=Olá!%20Vim+pelo+site+e+preciso+de+ajuda+com+meu+veículo." target="_blank"
+       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-900/40 hover:scale-110 transition z-50 animate-bounce">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-y-full');
+        });
+
+        function toggleCard(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            content.classList.toggle('expanded');
+            icon.classList.toggle('ph-caret-down');
+            icon.classList.toggle('ph-caret-up');
+        }
+    </script>
+</body>
+</html>

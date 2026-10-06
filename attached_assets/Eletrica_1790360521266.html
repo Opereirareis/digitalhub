@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Guia de Consulta - P1 Eletricidade</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8.2pt;
+    line-height: 1.15;
+    color: #111;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    page-break-after: always;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+  .main-title {
+    text-align: center;
+    font-size: 10.5pt;
+    font-weight: bold;
+    color: #002b49;
+    border-bottom: 2px solid #002b49;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .section-header {
+    background: #002b49;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+  }
+  p {
+    margin: 2px 0;
+    text-align: justify;
+  }
+  b {
+    color: #002b49;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+    font-size: 7.5pt;
+  }
+  th, td {
+    border: 1px solid #7799bb;
+    padding: 2.5px 4px;
+    text-align: left;
+  }
+  th {
+    background: #e5edf2;
+    color: #002b49;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- PÁGINA 1 -->
+<div class="page">
+  <div class="main-title">FATEC OSASCO — GUIA RÁPIDO DE CONSULTA / P1 ELETRICIDADE</div>
+
+  <div class="section-header">1. GRANDEZAS ELÉTRICAS FUNDAMENTAIS E UNIDADES DO SI</div>
+  <p><b>• Tensão / ddp (V ou E):</b> Força motriz de cargas elétricas[cite: 3, 16]. Unidade: Volt (V)[cite: 3]. ddp entre dois nós: Vab = Va - Vb[cite: 16]. Referencial de Terra: 0 V.</p>
+  <p><b>• Corrente (I):</b> Fluxo ordenado de elétrons livres sob uma ddp. Unidade: Ampère (A)[cite: 3]. Sentido convencional: do polo (+) para o (-)[cite: 14, 16].</p>
+  <p><b>• Resistência (R):</b> Oposição ao fluxo elétrico[cite: 3, 8]. Unidade: Ohm (Ω)[cite: 3, 8]. Condutância (G): G = 1/R em Siemens (S).</p>
+  <p><b>• Potência (P):</b> Taxa temporal de conversão de energia[cite: 10]. Unidade: Watt (W)[cite: 10].</p>
+  <p><b>• Consumo de Energia (E):</b> E = P · Δt[cite: 12]. No SI é Joule (J)[cite: 10]; na tarifação comercial é Quilowatt-hora (kWh). 1 kWh = 3,6 × 10⁶ J.</p>
+  <p><b>• Prefixos Métricos:</b> mili (m) = 10⁻³[cite: 4] | micro (μ) = 10⁻⁶[cite: 4] | nano (n) = 10⁻⁹ | quilo (k) = 10³[cite: 4] | Mega (M) = 10⁶.</p>
+
+  <div class="section-header">2. LEIS DE OHM E CONDUTORES</div>
+  <p><b>• 1ª Lei de Ohm:</b> V = R · I   ⟺   I = V / R   ⟺   R = V / I[cite: 3, 4]. Válida para condutores e resistores ôhmicos mantidos a temperatura controlada[cite: 4, 8].</p>
+  <p><b>• 2ª Lei de Ohm:</b> R = ρ · (L / A)[cite: 4]. Onde ρ é a resistividade do material (Ω·m ou Ω·cm)[cite: 4], L o comprimento[cite: 4] e A a área da seção reta[cite: 4].</p>
+  <p><b>• Coerência Dimensional:</b> Se ρ for Ω·cm, L deve estar em cm e A em cm²[cite: 4]. Se ρ for Ω·m, use metros (1 mm² = 10⁻⁶ m²).</p>
+  <p><b>• Seção Circular de Fio:</b> A = (π · d²) / 4 = π · r².</p>
+
+  <div class="section-header">3. POTÊNCIA ELÉTRICA, EFEITO JOULE E EFICIÊNCIA</div>
+  <p><b>• Fórmulas Operacionais:</b> P = V · I = R · I² = V² / R[cite: 10]. A potência total da fonte é sempre igual à soma das potências dissipadas na rede.</p>
+  <p><b>• Efeito Joule:</b> Conversão de energia elétrica em térmica pelo choque de portadores de carga com a rede cristalina: Q = R · I² · t[cite: 4, 6].</p>
+  <p><b>• Cargas Não Ôhmicas (Lâmpadas de Tungstênio):</b> O aquecimento eleva a resistividade com a ddp[cite: 4]. A curva I x V curva para baixo[cite: 4]. Resolva R = V/I e P = V·I estritamente nas coordenadas lidas no ponto gráfico da questão[cite: 4].</p>
+  <p><b>• Eficiência Mecânico-Elétrica:</b> η = P_saída / P_entrada = E_útil / E_total (0 ≤ η ≤ 1)[cite: 4, 13]. Equivalência: 1 hp = 746 W[cite: 4].</p>
+  <p><b>• Sistemas em Cascata:</b> A saída útil de cada estágio é a entrada do seguinte: η_total = η₁ · η₂ · η₃[cite: 4].</p>
+
+  <div class="section-header">4. LEIS DE KIRCHHOFF (LKC E LKT)</div>
+  <p><b>• 1ª Lei (LKC - Lei dos Nós):</b> Princípio da conservação de carga[cite: 4]. Em qualquer nó: Σ I_entram = Σ I_saem[cite: 4].</p>
+  <p><b>• 2ª Lei (LKT - Lei das Malhas):</b> Princípio da conservação de energia[cite: 4, 5, 16]. Em malha fechada: Σ E_fontes = Σ V_quedas (Σ ΔV = 0).</p>
+  <p><b>• Convenção de Percurso:</b> Ao passar na fonte de (-) para (+): elevação (+E)[cite: 16]. Ao percorrer resistor a favor da corrente: queda (-R·I)[cite: 16].</p>
+</div>
+
+<!-- PÁGINA 2 -->
+<div class="page">
+  <div class="main-title">FATEC OSASCO — GUIA RÁPIDO DE CONSULTA / P1 ELETRICIDADE (PÁGINA 2)</div>
+
+  <div class="section-header">5. ASSOCIAÇÕES DE RESISTORES (SÉRIE, PARALELO E FONTES)</div>
+  <p><b>• Circuito Série:</b> Corrente igual em todos (I_total = I₁ = I₂)[cite: 9]. Tensões se somam: E = V₁ + V₂[cite: 9]. Req = R₁ + R₂ + ... + Rn[cite: 9]. (Req > maior resistor).</p>
+  <p><b>• Circuito Paralelo:</b> Tensão idêntica em todos (V₁ = V₂ = E)[cite: 9]. Correntes se somam: I_total = I₁ + I₂. 1/Req = 1/R₁ + 1/R₂ + ...[cite: 4] (Req < menor resistor).</p>
+  <p><b>• Atalhos de Paralelo:</b> Dois resistores: Req = (R₁ · R₂) / (R₁ + R₂). N resistores iguais a R: Req = R / N.</p>
+  <p><b>• Fontes em Série:</b> E_total = Σ (±Ei). Polos opostos ligados (+ com -) somam tensões; polos invertidos (+ com + ou - com -) subtraem[cite: 9].</p>
+  <p><b>• Fontes Simétricas (±V com Terra Central):</b> Nó central no terra = 0 V. Terminal (+) superior = +V. Terminal (-) inferior = -V. ddp total: Vab = (+V) - (-V) = 2V.</p>
+
+  <div class="section-header">6. ROTEIRO DE RESOLUÇÃO DE CIRCUITOS MISTOS</div>
+  <p><b>1. Reconhecimento dos Nós:</b> Identifique os nós de ramificação de corrente para isolar quem está de fato em série e quem está em paralelo[cite: 1, 2].</p>
+  <p><b>2. Redução Progressiva:</b> Comece pelos blocos mais distantes da fonte simplificando pares e trios até obter a Resistência Total (RT)[cite: 1, 2].</p>
+  <p><b>3. Corrente da Fonte:</b> Calcule IT = E / RT[cite: 1, 2].</p>
+  <p><b>4. Desdobramento Reverso:</b> Retorne abrindo os blocos: em resistores em série calcule Vi = Ri · I[cite: 1, 2]; em ramos em paralelo aplique a ddp do nó para achar Ik = Vnó / Rk[cite: 1, 2].</p>
+  <p><b>5. Prova Real de Potência:</b> Verifique se P_fonte = E · IT coincide com a soma de todas as potências dissipadas nos resistores.</p>
+
+  <div class="section-header">7. MATRIZ RÁPIDA DE RESOLUÇÃO PARA QUESTÕES DE PROVA</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:25%;">Problema / Enunciado</th>
+        <th style="width:25%;">Conceito Físico</th>
+        <th>Equação e Roteiro Direto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Barra / Fio Condutor</b>[cite: 4]</td>
+        <td>2ª Lei de Ohm[cite: 4]</td>
+        <td>R = ρ·L / A. Cuidado com conversões: se ρ for Ω·cm, converta L e A para cm[cite: 4].</td>
+      </tr>
+      <tr>
+        <td><b>Circuito Série</b></td>
+        <td>Corrente idêntica[cite: 9]</td>
+        <td>Req = Σ Ri. I = E / Req[cite: 3]. Vi = Ri · I[cite: 3]. Pi = Ri · I²[cite: 12].</td>
+      </tr>
+      <tr>
+        <td><b>Circuito Paralelo</b></td>
+        <td>Tensão idêntica[cite: 9]</td>
+        <td>Vi = E em todos. Ii = E / Ri[cite: 3]. Itotal = Σ Ii. Req = E / Itotal[cite: 3].</td>
+      </tr>
+      <tr>
+        <td><b>Lâmpada não linear</b>[cite: 4]</td>
+        <td>Ponto de operação[cite: 4]</td>
+        <td>Ler coordenadas (V, I) da curva dada no gráfico: P = V · I e R = V / I[cite: 4].</td>
+      </tr>
+      <tr>
+        <td><b>Motor e Rendimento</b>[cite: 4]</td>
+        <td>Conversão de Potência[cite: 4]</td>
+        <td>Pe = V · I[cite: 4]. Ps = η · Pe[cite: 4]. hp = Ps / 746[cite: 4].</td>
+      </tr>
+      <tr>
+        <td><b>Elementos em Cascata</b>[cite: 4]</td>
+        <td>Rendimento Composto[cite: 4]</td>
+        <td>η_total = η₁ · η₂ · η₃[cite: 4]. Multiplicar as eficiências em valor decimal[cite: 4].</td>
+      </tr>
+      <tr>
+        <td><b>Fatura de Energia</b></td>
+        <td>Consumo Energético</td>
+        <td>E(kWh) = P(kW) · Δt(h)[cite: 12]. Custo (R$) = E(kWh) × Tarifa.</td>
+      </tr>
+      <tr>
+        <td><b>Fontes em Série Invertidas</b>[cite: 9]</td>
+        <td>Soma Algébrica</td>
+        <td>Vab = (+E₁) + (+E₂) - (E₃) conforme a orientação dos polos (+) e (-).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
