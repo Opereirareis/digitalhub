@@ -3,8 +3,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import NotFound from '@/pages/not-found';
-import Atendimento from '@/pages/atendimento';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 import { Header } from '@/components/Header';
@@ -16,6 +14,14 @@ import { FAQSection } from '@/components/FAQSection';
 import { FinalCTA } from '@/components/FinalCTA';
 import { Footer } from '@/components/Footer';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+
+import ServicosPage from '@/pages/servicos';
+import SobrePage from '@/pages/sobre';
+import ContatoPage from '@/pages/contato';
+import TermosPage from '@/pages/termos';
+import PoliticaPage from '@/pages/politica';
+import Atendimento from '@/pages/atendimento';
+import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
 
@@ -52,7 +58,7 @@ function Home() {
 
   return (
     <div className="site-shell min-h-[100dvh] bg-[#18181B] text-white">
-      {/* 1. Header: Logo MEV | Serviços | Manifesto | FAQ | [Contato] */}
+      {/* 1. Header: Logo MEV | Serviços | Manifesto | FAQ | Contato */}
       <Header />
 
       <main>
@@ -94,6 +100,11 @@ function Router() {
     <RoutedErrorBoundary>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/servicos" component={ServicosPage} />
+        <Route path="/sobre" component={SobrePage} />
+        <Route path="/contato" component={ContatoPage} />
+        <Route path="/termos" component={TermosPage} />
+        <Route path="/politica" component={PoliticaPage} />
         <Route path="/atendimento" component={Atendimento} />
         <Route component={NotFound} />
       </Switch>

@@ -1,24 +1,28 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'wouter';
 import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
 import mevLogo from '@assets/LogoMev01_1790362981951.jpg';
 import { getWhatsAppLink } from '@/lib/constants';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const isHome = location === '/';
 
   const navLinks = [
-    { href: '#servicos', label: 'Serviços' },
-    { href: '#manifesto', label: 'Manifesto' },
-    { href: '#como-funciona', label: 'Como Funciona' },
-    { href: '#faq', label: 'FAQ' },
+    { href: isHome ? '#servicos' : '/servicos', label: 'Serviços' },
+    { href: isHome ? '#manifesto' : '/sobre', label: 'Manifesto' },
+    { href: isHome ? '#como-funciona' : '/#como-funciona', label: 'Como Funciona' },
+    { href: isHome ? '#faq' : '/#faq', label: 'FAQ' },
+    { href: '/contato', label: 'Contato' },
   ];
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80 bg-[#18181B]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8">
         {/* Brand Logo */}
-        <a
-          href="#inicio"
+        <Link
+          href="/"
           aria-label="MEV Consultoria Digital - Início"
           data-testid="link-logo"
           className="group flex items-center gap-2.5 transition-transform hover:scale-[1.02]"
@@ -34,15 +38,15 @@ export function Header() {
           <span className="font-display text-2xl font-bold tracking-tight text-white">
             MEV<span className="text-[#805AD5]">.</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
           {navLinks.map((item) => (
             <a
-              key={item.href}
+              key={item.label}
               href={item.href}
-              data-testid={`link-nav-${item.href.replace('#', '')}`}
+              data-testid={`link-nav-${item.label.toLowerCase()}`}
               className="text-sm font-medium text-zinc-300 transition-colors hover:text-[#805AD5]"
             >
               {item.label}
@@ -85,10 +89,10 @@ export function Header() {
           <div className="mx-auto flex max-w-7xl flex-col gap-2">
             {navLinks.map((item) => (
               <a
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                data-testid={`link-mobile-${item.href.replace('#', '')}`}
+                data-testid={`link-mobile-${item.label.toLowerCase()}`}
                 className="rounded-xl px-3 py-3 text-base font-medium text-zinc-200 transition-colors hover:bg-zinc-900 hover:text-[#805AD5]"
               >
                 {item.label}

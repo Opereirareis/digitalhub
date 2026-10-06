@@ -1,3 +1,4 @@
+import { Link } from 'wouter';
 import { MessageCircle, Mail, Clock, Instagram, Facebook } from 'lucide-react';
 import mevLogo from '@assets/LogoMev01_1790362981951.jpg';
 import { SITE_INFO, getWhatsAppLink } from '@/lib/constants';
@@ -11,8 +12,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4 lg:gap-8">
           {/* Column 1: Brand & Bio */}
           <div className="md:col-span-2">
-            <a
-              href="#inicio"
+            <Link
+              href="/"
               className="group inline-flex items-center gap-2.5 transition-transform hover:scale-[1.02]"
               data-testid="link-footer-logo"
             >
@@ -22,7 +23,7 @@ export function Footer() {
               <span className="font-display text-2xl font-bold tracking-tight text-white">
                 MEV<span className="text-[#805AD5]">.</span>
               </span>
-            </a>
+            </Link>
 
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-zinc-400">
               Eliminamos as travas burocráticas para motoristas, entregadores e autônomos resolverem
@@ -56,33 +57,43 @@ export function Footer() {
           {/* Column 2: Navigation Links */}
           <div>
             <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
-              Navegação
+              Páginas
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <a href="#servicos" className="hover:text-[#805AD5] transition-colors">
+                <Link href="/" className="hover:text-[#805AD5] transition-colors">
+                  Início
+                </Link>
+              </li>
+              <li>
+                <Link href="/servicos" className="hover:text-[#805AD5] transition-colors">
                   Serviços
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#manifesto" className="hover:text-[#805AD5] transition-colors">
-                  Manifesto
-                </a>
+                <Link href="/sobre" className="hover:text-[#805AD5] transition-colors">
+                  Quem Somos
+                </Link>
               </li>
               <li>
-                <a href="#como-funciona" className="hover:text-[#805AD5] transition-colors">
-                  Como Funciona
-                </a>
+                <Link href="/atendimento" className="hover:text-[#805AD5] transition-colors">
+                  Triagem Rápida
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#805AD5] transition-colors">
-                  Perguntas Frequentes
-                </a>
+                <Link href="/contato" className="hover:text-[#805AD5] transition-colors">
+                  Contato
+                </Link>
               </li>
               <li>
-                <a href="/atendimento" className="hover:text-[#805AD5] transition-colors">
-                  Triagem de Atendimento
-                </a>
+                <Link href="/termos" className="hover:text-[#805AD5] transition-colors">
+                  Termos de Uso
+                </Link>
+              </li>
+              <li>
+                <Link href="/politica" className="hover:text-[#805AD5] transition-colors">
+                  Política de Privacidade
+                </Link>
               </li>
             </ul>
           </div>
@@ -119,9 +130,14 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-zinc-800/80 pt-8 text-xs text-zinc-500 sm:flex-row">
           <p>© {currentYear} MEV Consultoria Digital. Todos os direitos reservados.</p>
-          <p className="flex items-center gap-1">
-            Feito para deixar a burocracia humana e sem complicação.
-          </p>
+          <div className="flex gap-4">
+            <Link href="/termos" className="hover:underline">
+              Termos de Uso
+            </Link>
+            <Link href="/politica" className="hover:underline">
+              Privacidade
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
